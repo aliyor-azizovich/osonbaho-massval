@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MassValPredictOutput",
+  "type": "object",
+  "properties": {
+    "prediction_value": { "type": "number" },
+    "confidence_interval": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "model_version": { "type": "string" },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "R2": { "type": "number" },
+        "MAE": { "type": "number" },
+        "MAPE": { "type": "number" },
+        "MdAPE": { "type": "number" },
+        "MR": { "type": "number" },
+        "COD": { "type": "number" },
+        "PRD": { "type": "number" },
+        "PRB": { "type": "number" }
+      },
+      "additionalProperties": true
+    },
+    "explain": { "type": "object" }
+  },
+  "required": ["prediction_value","confidence_interval","model_version"],
+  "additionalProperties": false
+}
