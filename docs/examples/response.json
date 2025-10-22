@@ -1,0 +1,6 @@
+{
+  "prediction_value": 3150000000,
+  "confidence_interval": [2800000000, 3500000000],
+  "model_version": "v1.2.0",
+  "metrics": {"R2": 0.62, "MAPE": 0.31, "COD": 36.8}
+}
